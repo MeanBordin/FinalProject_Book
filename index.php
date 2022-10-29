@@ -27,8 +27,8 @@
                     <th>ชื่อหนังสือ</th>
                     <th>ประเภท</th>
                     <th>ชื่อผู้แต่ง</th>
-                    <th>รูปสินค้า</th>
                     <th>ราคา</th>
+                    <th>รูปสินค้า</th>
                     <th>แก้ไข</th>
                     <th>ลบ</th>
                 </tr>
@@ -43,8 +43,8 @@
                     <td><?=$row["book_name"]?></td>
                     <td><?=$row['book_type']?></td>
                     <td><?=$row["book_name_writer"]?></td>
-                    <td><img src="uploads/<?=$row["book_img"]?>" width="120px" height="120px"></td>
                     <td><?=$row["price"]?></td>
+                    <td><img src="uploads/<?=$row["book_img"]?>" width="80px" height="100px"></td>
                     <td>
                         <button type="button" class="h6 btn btn-warning">
                             <a 

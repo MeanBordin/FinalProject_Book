@@ -12,7 +12,7 @@
         $uploads_path = './uploads/' . $new_image_name;
         move_uploaded_file($_FILES['book_img']['tmp_name'], $uploads_path);
    } else {
-    $new_image_name = "";
+        $new_image_name = "";
    }
 
     //insert data to database    
