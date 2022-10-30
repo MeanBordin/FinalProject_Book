@@ -9,6 +9,12 @@
     // uploade image
    if (is_uploaded_file($_FILES['book_img']['tmp_name'])) {
         $new_image_name = 'bk_' . uniqid() . "." .pathinfo(basename($_FILES['book_img']['name']), PATHINFO_EXTENSION);
+        // // check file type
+        // $image_type = strtolower(pathinfo($new_image_name,PATHINFO_EXTENSION));
+        // echo $image_type;
+        // if ($image_type != 'jpeg' && $image_type != 'jpg' && $image_type != 'png') {
+        //     echo "Sorry, only JPG, JPEG, PNG files are allowed.";
+        // }
         $uploads_path = './uploads/' . $new_image_name;
         move_uploaded_file($_FILES['book_img']['tmp_name'], $uploads_path);
    } else {
@@ -23,7 +29,7 @@
     if ($result) {
         echo "<script>alert('บันทึกข้อมูลสำเร็จ');</script>";
         echo "<script>window.location='form_book.php';</script>";
-    }else{
+    } else {
         echo "<script>alert('ไม่สามารถบันทึกข้อมูลได้');</script>";
     }
 ?>

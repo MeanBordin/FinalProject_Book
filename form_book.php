@@ -22,8 +22,10 @@
             <input type="text" name="book_name_writer" class="form-control mb-4" placeholder="ผู้แต่ง">
             <label for="">ราคา</label>
             <input type="text" name="price" class="form-control mb-4" placeholder="000.00">
+
             <label for="" class="mb-2">รูปหนังสือ</label>
             <input type="file" name="book_img" class="form-control">
+            
             <div class="float-end">
                 <button type="submit" name="submit" class="btn btn-primary mt-4 mb-4">submit</button>
                 <button type="submit" class="btn btn-danger ms-2">
