@@ -28,7 +28,7 @@
 
     if ($result) {
         echo "<script>alert('บันทึกข้อมูลสำเร็จ');</script>";
-        echo "<script>window.location='form_book.php';</script>";
+        echo "<script>window.location='book_table.php';</script>";
     } else {
         echo "<script>alert('ไม่สามารถบันทึกข้อมูลได้');</script>";
     }
