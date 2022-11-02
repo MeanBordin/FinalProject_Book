@@ -29,7 +29,7 @@
             <label>ชื่อหนังสือ</label>
             <input class="form-control mb-4" type="text" value="<?=$row['book_name']?>">
             <label>ประเภทหนังสือ</label>
-            <input class="form-control mb-4" type="text" value="<?=$row['book_type']?>">
+            <input class="form-control mb-4" type="text" value="<?=$row['type_id']?>">
             <label>ผู้แต่ง</label>
             <input class="form-control mb-4" type="text" value="<?=$row['book_name_writer']?>">
             <label>ราคา</label>

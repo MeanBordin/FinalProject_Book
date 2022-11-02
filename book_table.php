@@ -42,8 +42,8 @@
                 <tr>
                     <td><?=$row['book_id']?></td>
                     <td><?=$row["book_name"]?></td>
-                    <td><?=$row['book_type']?></td>
-                    <td><?=$row["book_name_writer"]?></td>
+                    <td><?=$row['type_name']?></td>
+                    <td><?=$row["name_writer"]?></td>
                     <td><?=$row["price"]?>฿</td>
                     <td><img src="uploads/<?=$row["book_img"]?>" width="80px" height="100px"></td>
                     <td>
