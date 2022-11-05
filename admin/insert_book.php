@@ -1,9 +1,9 @@
 <?php 
-    @include 'connect.php';
+    @include '../localhost/connect.php';
 
     $bname = $_POST['book_name'];
-    $btype = $_POST['book_type'];
-    $bwriter = $_POST['book_name_writer'];
+    $btype = $_POST['type_name'];
+    $bwriter = $_POST['name_writer'];
     $bprice = $_POST['price'];
 
     // uploade image
@@ -15,14 +15,14 @@
         // if ($image_type != 'jpeg' && $image_type != 'jpg' && $image_type != 'png') {
         //     echo "Sorry, only JPG, JPEG, PNG files are allowed.";
         // }
-        $uploads_path = './uploads/' . $new_image_name;
+        $uploads_path = '../uploads/' . $new_image_name;
         move_uploaded_file($_FILES['book_img']['tmp_name'], $uploads_path);
    } else {
         $new_image_name = "";
    }
 
     //insert data to database    
-    $sql = "INSERT INTO book(book_name, book_type, book_name_writer, price, book_img) 
+    $sql = "INSERT INTO book(book_name, type_name, name_writer, price, book_img) 
                         VALUES ('$bname', '$btype', '$bwriter', '$bprice', '$new_image_name')";
     $result = mysqli_query($conn, $sql);
 

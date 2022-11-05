@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product</title>
-    <link rel="stylesheet" href="style/font.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>BookStore</title>
+    <link rel="stylesheet" href="../style/font.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,7 +18,7 @@
             <label>ชื่อหนังสือ</label>
             <input type="text" name="book_name" class="form-control mb-4" placeholder="ชื่อหนังสือ">
             <label>ประเภทหนังสือ</label>
-            <select name="book_type" class="form-control mb-4">
+            <select name="type_name" class="form-control mb-4">
                 <option selected disabled>เลือกประเภทหนังสือ</option>
                 <option value="การ์ตูน">การ์ตูน</option>
                 <option value="นิยาย">นิยาย</option>
@@ -29,7 +29,7 @@
             </select>
             <!-- <input type="text" name="book_type" class="form-control mb-4" placeholder="ประเภทหนังสือ"> -->
             <label>ชื่อผู้แต่ง</label>
-            <input type="text" name="book_name_writer" class="form-control mb-4" placeholder="ผู้แต่ง">
+            <input type="text" name="name_writer" class="form-control mb-4" placeholder="ผู้แต่ง">
             <label>ราคา</label>
             <input type="text" name="price" class="form-control mb-4" placeholder="000.00฿">
             <label class="mb-2">รูปหนังสือ</label>
