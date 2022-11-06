@@ -37,7 +37,7 @@
             <div class="float-end">
                 <button type="submit" name="submit" class="btn btn-primary mt-4 mb-4">submit</button>
                 <button type="submit" class="btn btn-danger ms-2">
-                    <a class="text-white text-decoration-none" href="#">Cancel</a>
+                    <a class="text-white text-decoration-none" href="book_table.php">Cancel</a>
                 </button>
             </div>
         </form>

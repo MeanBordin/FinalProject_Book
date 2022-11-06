@@ -29,7 +29,7 @@
                 <div class="col-sm-3">
                     <div class="text-center">
                         <a href="book_detail.php?id=<?=$row['book_id']?>">
-                            <img src="uploads/<?= $row['book_img']?>" width="180px" height="220px" class="mt-2"><br>
+                            <img src="uploads/<?=$row['book_img']?>" width="180px" height="220px" class="mt-2"><br>
                         </a>
                         <div class="mt-3 mb-5">
                             <label class="fw-bold">รหัสสินค้า : <?= $row['book_id']?></label><br>

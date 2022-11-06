@@ -1,4 +1,4 @@
-<?php include '../admin/conndb.php'?>
+<?php include './localhost/connect.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,21 +15,22 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <?php @include 'navbar.php'; ?>
-    <div class="container mt-5">
-        <form action="#" method="post">
+    <?php @include 'navbar2.php'; ?>
+    <div class="container mt-5 bg-light bordered rounded border">
+        <form action="insert_register.php" method="post">
             <h1 class="text-center mb-0">สมัครสมาชิก</h1>
-            <div class="text-center">
-                <img class="img-responsive center-block mb-5" src="../image/registration-2.png" width="400" height="250" alt="register">
-            </div>
             &nbsp;ชื่อผู้ใช้
-            <input class="form-control" name="username" type="text" placeholder="username" required><br>
+            <input class="form-control" name="username" type="text" maxlength="25" placeholder="username" required><br>
+            &nbsp;ชื่อจริง
+            <input class="form-control" name="firstname" type="text" placeholder="first name" required><br>
+            &nbsp;นามสกุล
+            <input class="form-control" name="lastname" type="text" placeholder="last name" required><br>
             &nbsp;อีเมล
             <input class="form-control" name="email" type="email" placeholder="email" required><br>
             &nbsp;รหัสผ่าน
-            <input class="form-control" name="password" type="password"  placeholder="password" required><br>
+            <input class="form-control" name="password" type="password" maxlength="10" placeholder="password" required><br>
             <!-- buttom -->
-            <div class="float-end">
+            <div class="float-end mt-5">
                 <input class="btn btn-warning me-2" name="submit" type="submit" value="สมัครสมาชิก">
                 <input class="btn btn-danger" type="reset" value="ยกเลิก">
             </div>

@@ -18,7 +18,7 @@
         <div class="h4 text-center alert alert-info mb-4 mt-4" role="alert">
             แสดงข้อมูลสินค้า
         </div>
-        <a href="form_book.php" class="btn btn-success float-end mb-3 mt-5">
+        <a href="form_book.php" class="btn btn-primary float-end mb-3 mt-5">
             <i class="bi bi-plus-circle"></i> เพิ่มสินค้า
         </a>
         <table class="table table-striped table-hover "> 

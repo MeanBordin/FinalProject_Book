@@ -28,8 +28,11 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                     <h3 class="ms-3">
-                        <i class="bi bi-bag-heart text-light"></i>
-                    </h3>           
+                        <a href="cart.php">
+                            <i class="bi bi-bag-heart text-light"></i>
+                        </a>
+                    </h3>
+                    <a href="logout.php" class="btn btn-secondary ms-3">logout</a>           
                 </form>
             </div>
         </div>

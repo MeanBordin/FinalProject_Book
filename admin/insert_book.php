@@ -31,5 +31,6 @@
         echo "<script>window.location='book_table.php';</script>";
     } else {
         echo "<script>alert('ไม่สามารถบันทึกข้อมูลได้');</script>";
+        echo "Error : {$sql} <br>" . mysqli_error($conn);
     }
 ?>

@@ -12,8 +12,8 @@
 </head> 
 <body>
     <?php @include 'navbar.php' ?>
-    <div class="container">
-        <div class="alert alert-primary mt-5 text-center" role="alert">
+    <div class="container ">
+        <div class="alert mt-5 text-center" role="alert">
             <h3>รายละเอียดสินค้า</h3>
         </div>
         <div class="row mt-5">
@@ -21,7 +21,7 @@
                 $bk_id =$_GET['id'];
                 $sql = "SELECT * FROM book WHERE book_id = '$bk_id'";
                 $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_array($result)) {
+                $row = mysqli_fetch_array($result)
             ?>
             <div class="col-md-4">
                 <img src="./uploads/<?=$row['book_img']?>" width="290px" height="100%">
@@ -46,14 +46,13 @@
                         ราคา : <label class="text-danger fw-bold"><?=$row['price']?></label> บาท
                     </h4> 
                 </p>
-                <input type="number"><br> 
-                <a href="order.php" class="btn btn-warning mt-3 rounded-pill">
+                <!-- <input type="number"><br>  -->
+                <a href="order.php?id=<?=$row['book_id']?>" class="btn btn-warning mt-3 rounded-pill">
                     เพิ่มในตะกร้า
                 </a>
             </div>
         </div>
             <?php 
-                } 
                 mysqli_close($conn)
             ?>
     </div>
