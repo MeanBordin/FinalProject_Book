@@ -50,7 +50,7 @@
                                     $total = $_SESSION["strQty"][$i];
                                     $sum = $total * $row_book['price'];
                                     $sum_price = $sum_price + $sum;
-                                    $sum_price = number_format($sum_priceม ,2);
+                                    $sum_price = number_format($sum_price ,2);
                                     // echo $i;
                         ?>
                         <tr>
