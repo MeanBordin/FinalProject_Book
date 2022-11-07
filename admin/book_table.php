@@ -21,14 +21,15 @@
         <a href="form_book.php" class="btn btn-primary float-end mb-3 mt-5">
             <i class="bi bi-plus-circle"></i> เพิ่มสินค้า
         </a>
-        <table class="table table-striped table-hover "> 
+        <table class="table table-striped table-hover table-bordered "> 
             <tbody class="table-striped">
                 <tr>
                     <th>#</th>
                     <th>ชื่อหนังสือ</th>
                     <th>ประเภท</th>
                     <th>ชื่อผู้แต่ง</th>
-                    <th>ราคา</th>
+                    <th>ราคา / เล่ม</th>
+                    <th>จำนวนที่วางขาย</th>
                     <th>รูปสินค้า</th>
                     <th>แก้ไข / ลบ</th>
                 </tr>
@@ -44,13 +45,14 @@
                     <td><?=$row['type_name']?></td>
                     <td><?=$row["name_writer"]?></td>
                     <td><?=$row["price"]?>฿</td>
+                    <td class="text-center"><?=$row["amount"]?></td>
                     <td><img src="../uploads/<?=$row["book_img"]?>" width="80px" height="100px"></td>
                     <td>
-                        <a 
+                        <!-- <a 
                         class="text-light text-decoration-none btn btn-primary"
                         href="#<?=$row['book_id']?>">
                             <i class="bi bi-eye"></i></i> 
-                        </a>
+                        </a> -->
                         <a 
                         class="text-light text-decoration-none btn btn-secondary"
                         href="edit_book.php?id=<?=$row['book_id']?>">

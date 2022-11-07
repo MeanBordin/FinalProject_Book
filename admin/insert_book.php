@@ -3,6 +3,7 @@
 
     $bname = $_POST['book_name'];
     $btype = $_POST['type_name'];
+    $amount = $_POST['amount'];
     $bwriter = $_POST['name_writer'];
     $bprice = $_POST['price'];
 
@@ -22,8 +23,8 @@
    }
 
     //insert data to database    
-    $sql = "INSERT INTO book(book_name, type_name, name_writer, price, book_img) 
-                        VALUES ('$bname', '$btype', '$bwriter', '$bprice', '$new_image_name')";
+    $sql = "INSERT INTO book(book_name, type_name, name_writer, price, book_img, amount) 
+                        VALUES ('$bname', '$btype', '$bwriter', '$bprice', '$new_image_name', '$amount')";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {

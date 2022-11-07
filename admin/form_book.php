@@ -30,8 +30,10 @@
             <!-- <input type="text" name="book_type" class="form-control mb-4" placeholder="ประเภทหนังสือ"> -->
             <label>ชื่อผู้แต่ง</label>
             <input type="text" name="name_writer" class="form-control mb-4" placeholder="ผู้แต่ง">
-            <label>ราคา</label>
+            <label>ราคา / เล่ม</label>
             <input type="text" name="price" class="form-control mb-4" placeholder="000.00฿">
+            <label>จำนวนที่วางขาย</label>
+            <input type="text" name="amount" class="form-control mb-4" placeholder="00000 เล่ม">
             <label class="mb-2">รูปหนังสือ</label>
             <input type="file" name="book_img" class="form-control">
             <div class="float-end">

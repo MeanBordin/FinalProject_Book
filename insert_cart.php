@@ -27,7 +27,7 @@
             
             $result = mysqli_query($conn, $sql_sum);
             if ($result) {
-                $sql_update = "UPDATE book SET amount = amount - '". $_SESSION["strProductID"][$i] ."' 
+                $sql_update = "UPDATE book SET amount = amount - '". $_SESSION["strQty"][$i] ."' 
                                WHERE book_id = '". $_SESSION["strProductID"][$i] ."' ";
                 mysqli_query($conn, $sql_update);
 
@@ -40,5 +40,9 @@
         }
     }
     mysqli_close($conn);
+    unset($_SESSION['intLine']);
+    unset($_SESSION["strProductID"][$i]);
+    unset($_SESSION["strQty"][$i]);
+    unset($_SESSION["sum_price"]);
     session_destroy();
 ?>
