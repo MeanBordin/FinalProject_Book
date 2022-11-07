@@ -16,9 +16,9 @@
 </head>
 <body>
     <?php @include 'navbar2.php'; ?>
-    <div class="container mt-5 bg-light bordered rounded border">
+    <div class="container mt-5 bg-light bordered rounded border p-5">
         <form action="insert_register.php" method="post">
-            <h1 class="text-center mb-0">สมัครสมาชิก</h1>
+            <h1 class="text-center mb-4">สมัครสมาชิก</h1>
             &nbsp;ชื่อผู้ใช้
             <input class="form-control" name="username" type="text" maxlength="25" placeholder="username" required><br>
             &nbsp;ชื่อจริง
@@ -30,7 +30,7 @@
             &nbsp;รหัสผ่าน
             <input class="form-control" name="password" type="password" maxlength="10" placeholder="password" required><br>
             <!-- buttom -->
-            <div class="float-end mt-5">
+            <div class="float-end">
                 <input class="btn btn-warning me-2" name="submit" type="submit" value="สมัครสมาชิก">
                 <input class="btn btn-danger" type="reset" value="ยกเลิก">
             </div>

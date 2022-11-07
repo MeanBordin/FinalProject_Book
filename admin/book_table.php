@@ -47,14 +47,19 @@
                     <td><img src="../uploads/<?=$row["book_img"]?>" width="80px" height="100px"></td>
                     <td>
                         <a 
-                        class="text-dark text-decoration-none btn btn-warning"
+                        class="text-light text-decoration-none btn btn-primary"
+                        href="#<?=$row['book_id']?>">
+                            <i class="bi bi-eye"></i></i> 
+                        </a>
+                        <a 
+                        class="text-light text-decoration-none btn btn-secondary"
                         href="edit_book.php?id=<?=$row['book_id']?>">
-                            <i class="bi bi-pencil-fill"></i> แก้ไข
+                            <i class="bi bi-pencil-fill"></i> 
                         </a>
                         <a  
                         class="text-white text-decoration-none btn btn-danger" 
                         href="del_book.php?id=<?=$row['book_id']?>" onclick="clikComfirm(this.href);return false;">
-                            <i class="bi bi-trash-fill"></i> ลบ
+                            <i class="bi bi-trash-fill"></i> 
                         </a>
                     </td>
                 </tr>
