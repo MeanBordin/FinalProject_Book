@@ -33,6 +33,7 @@
                             <th>ชื่อหนังสือ</th>
                             <th>ราคา</th>
                             <th>จำนวน</th>
+                            <th>เพิ่ม / ลด</th>
                             <th>รวม</th>
                             <th>ยกเลิก</th>
                         </tr>
@@ -58,10 +59,14 @@
                             <td>
                             <img src="uploads/<?=$row_book['book_img']?>" width="60px" height="80px" class="me-2">
                                 <?=$row_book['book_name']?>
+                              </td>
+                            <td class="text-center"><?=$row_book['price']?></td>
+                            <td class="text-center"><?=$total?></td>
+                            <td class="text-center"><?=$sum?></td>
+                            <td class="text-center">
+                                <a href="" class="btn btn-outline-secondary rounded-circle">+</a>
+                                <a href="" class="btn btn-outline-secondary rounded-circle">-</a>
                             </td>
-                            <td><?=$row_book['price']?></td>
-                            <td><?=$total?></td>
-                            <td><?=$sum?></td>
                             <td class="text-center">
                                 <a  class="text-white text-decoration-none btn btn-danger" 
                                 href="delete.php?Line=<?=$i?>">
@@ -75,7 +80,7 @@
                             } 
                         ?>
                         <tr>
-                            <td colspan="5" >
+                            <td colspan="6" >
                                 ราคารวมทั้งหมด
                             </td>
                             <td class="text-end"><?=$sum_price?> บาท</td>
