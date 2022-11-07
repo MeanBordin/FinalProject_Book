@@ -24,17 +24,50 @@
                         </ul>
                     </li> -->
                 </ul>
-                <form class="d-flex mt-2 mb-1">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex mt-2 mb-1" method="POST">
+                    <input class="form-control me-2" type="search" placeholder="Search"  name="search">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                     <h3 class="ms-3">
                         <a href="cart.php">
                             <i class="bi bi-bag-heart text-light"></i>
                         </a>
                     </h3>
-                    <a href="logout.php" class="btn btn-secondary ms-3">logout</a>           
                 </form>
+                <a href="logout.php" class="btn btn-secondary ms-3">logout</a>           
             </div>
         </div>
     </div>
 </nav>
+
+<?php 
+    isset( $_POST['search'] ) ? $search = $_POST['search'] : $search = "";
+    if( !empty( $search ) ) {
+?>    
+<div class="container mt-5">
+    <div class="row">
+        <?php
+            $sql = "SELECT * FROM book WHERE ( book_name LIKE '%".$search."%' )";
+            $result = mysqli_query($conn, $sql);
+            $num_row = 1;
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+            <div class="col-sm-3">
+                    <div class="text-center">
+                        <a href="book_detail.php?id=<?=$row['book_id']?>">
+                            <img src="./uploads/<?=$row['book_img']?>" width="180px" height="220px" class="mt-2"><br>
+                        </a>
+                        <div class="mt-3 mb-5">
+                            <label class="fw-bold">รหัสสินค้า : <?= $row['book_id']?></label><br>
+                            <label class="fw-bold">ชื่อหนังสือ : <?=strtoupper($row['book_name'])?></label><br><br>
+                            <label class="fw-bold text-success">ราคา : <?= $row['price'] ?>฿</label><br>
+                            <a href="order.php?id=<?=$row['book_id']?>" class="btn btn-warning text-dark mt-2 rounded-pill">เพิ่มในตะกร้า</a>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                $num_row++;
+            }
+            ?>
+            </div>
+    </div>   
+<?php } ?>
