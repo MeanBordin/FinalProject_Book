@@ -42,9 +42,11 @@
                 <option value="ภาษาอังกฤษ">ภาษาอังกฤษ</option>
             </select>
             <label>ผู้แต่ง</label>
-            <input class="form-control mb-4" type="text" name="name_writer" value="<?=$row['name_writer']?>">
-            <label>ราคา</label>
-            <input class="form-control mb-4" type="text" name="price" value="<?=$row['price']?>">
+            <input class="form-control mb-4" type="text" name="name_writer" value="<?=$row['name_writer'];?>" required>
+            <label>ราคา / เล่ม</label>
+            <input class="form-control mb-4" type="text" name="price" value="<?=$row['price'];?>" required>
+            <label>จำนวนที่วางขาย</label>
+            <input type="text" name="amount" class="form-control mb-4" placeholder="00000 เล่ม" value="<?=$row['amount'];?>" required>
             <!-- <label>รูปสินค้า</label>
             <input class="form-control mb-4" type="file" value="<?=$row['book_img']?>"> -->
             <div class="float-end">

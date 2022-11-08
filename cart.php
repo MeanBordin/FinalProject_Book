@@ -54,18 +54,18 @@ session_start();
                                 $_SESSION["sum_price"] = $sum_price;
                         ?>
                                 <tr>
-                                    <td><?= $num_row ?></td>
+                                    <td class="text-center"><?= $num_row ?></td>
                                     <td>
-                                        <img src="uploads/<?= $row_book['book_img'] ?>" width="60px" height="80px" class="me-2">
+                                        <img src="uploads/<?= $row_book['book_img']?>" width="60px" height="80px" class="me-2">
                                         <?= $row_book['book_name'] ?>
                                     </td>
-                                    <td class="text-center"><?= $row_book['price'] ?></td>
+                                    <td class="text-center"><?= $row_book['price']?></td>
                                     <td class="text-center"><?= $total ?></td>
                                     <td class="text-center"><?= $sum ?></td>
                                     <td class="text-center">
-                                        <a href="order.php?id=<?= $row_book['book_id'] ?>" class="btn btn-outline-secondary rounded-circle">+</a>
+                                        <a href="order.php?id=<?= $row_book['book_id']?>" class="btn btn-outline-secondary rounded-circle">+</a>
                                         <?php if ($_SESSION["strQty"][$i] > 1) { ?>
-                                            <a href="order_del.php?id=<?= $row_book['book_id'] ?>" class="btn btn-outline-secondary rounded-circle">-</a>
+                                            <a href="order_del.php?id=<?= $row_book['book_id']?>" class="btn btn-outline-secondary rounded-circle">-</a>
                                         <?php } ?>
                                     </td>
                                     <td class="text-center">
@@ -97,11 +97,11 @@ session_start();
                 </div>
                 <h3 class="mb-3 mt-2">ข้อมูลการสั่งซื้อ</h3>
                 <label for="" class="mt-3">ชื่อจริง-นามสกุล</label>
-                <input type="text" name="cus_name" class="form-control" style="width: 700px;">
+                <input type="text" name="cus_name" class="form-control" style="width: 700px;" required>
                 <label for="" class="mt-3">เบอร์โทรศัพท์</label>
-                <input type="text" name="phone" class="form-control" style="width: 700px;">
+                <input type="text" name="phone" class="form-control" style="width: 700px;" required>
                 <label for="" class="mt-3">ที่อยู่</label>
-                <textarea name="address" class="form-control" cols="30" rows="10" style="width: 700px; height: 100px;"></textarea>
+                <textarea name="address" class="form-control" cols="30" rows="10" style="width: 700px; height: 100px;" required></textarea>
             </div>
         </form>
     </div>

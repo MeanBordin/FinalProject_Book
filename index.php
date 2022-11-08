@@ -35,7 +35,9 @@
                             <label class="fw-bold">รหัสสินค้า : <?= $row['book_id']?></label><br>
                             <label class="fw-bold">ชื่อหนังสือ : <?=strtoupper($row['book_name'])?></label><br><br>
                             <label class="fw-bold text-success">ราคา : <?= $row['price'] ?>฿</label><br>
-                            <a href="order.php?id=<?=$row['book_id']?>" class="btn btn-warning text-dark mt-2 rounded-pill">เพิ่มในตะกร้า</a>
+                            <a href="order.php?id=<?=$row['book_id']?>" class="btn btn-warning text-dark mt-2 rounded-pill px-4">
+                                <i class="bi bi-cart-fill"></i> เพิ่มในตะกร้า
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -5,10 +5,11 @@
     $bname = $_POST['book_name'];
     $btype = $_POST['type_name'];
     $bwriter = $_POST['name_writer'];
+    $amout = $_POST['amount'];
     $bprice = $_POST['price'];
 
     $sql = "UPDATE book 
-            SET book_name='$bname', type_name='$btype', name_writer='$bwriter', price='$bprice'
+            SET book_name='$bname', type_name='$btype', name_writer='$bwriter', price='$bprice', amount='$amout'
             WHERE book_id='$bid' ";
     
     $result = mysqli_query($conn, $sql);

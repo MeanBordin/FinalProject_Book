@@ -30,7 +30,7 @@
                 <input class="btn btn-danger" type="reset" value="ยกเลิก">
             </div>
             <small>
-                <a href="register.php">register</a>
+                ต้องการบัญชีผู้ใช้ใหม่? <a href="register.php">register</a>
             </small>
         </form> 
     </div>

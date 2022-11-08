@@ -49,7 +49,7 @@
                 </p>
                 <!-- <input type="number"><br>  -->
                 <a href="order.php?id=<?=$row['book_id']?>" class="btn btn-warning mt-3 rounded-pill">
-                    เพิ่มในตะกร้า
+                    <i class="bi bi-cart-fill"></i> เพิ่มในตะกร้า
                 </a>
             </div>
         </div>
