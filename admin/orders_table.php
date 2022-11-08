@@ -21,43 +21,45 @@
         <div class="h4 text-center alert alert-info mb-4 mt-4" role="alert">
             แสดงข้อมูลสินค้า
         </div>
-        <a href="#" class="btn btn-primary float-end mb-3 mt-5">
+        <!-- <a href="#" class="btn btn-primary float-end mb-3 mt-5">
             <i class="bi bi-plus-circle"></i> เพิ่มสินค้า
-        </a>
+        </a> -->
         <table class="table table-striped table-hover table-bordered ">
             <tbody class="table-striped">
                 <tr class="text-center">
                     <th>#</th>
-                    <th>Order ID</th>
-                    <th>Book ID</th>
-                    <th>Order price</th>
-                    <th>Amount</th>
-                    <th>Total</th>
-                    <th>Action</th>
+                    <th>ชื่อ - นามสกุล</th>
+                    <th>ที่อยู่</th>
+                    <th>เบอร์โทรศัพท์</th>
+                    <th>ราคารวม</th>
+                    <th>สถานะชำระเงิน</th>
+                    <th>วันที่สั่งซื้อ</th>
+                    <th>แก้ไข / ลบ</th>
                 </tr>
             </tbody>
             <?php
-            $sql = "SELECT * FROM order_detail";
+            $sql = "SELECT * FROM orders";
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_array($result)) {
             ?>
-                <tr class="text-center">
-                    <td><?= $row['id'] ?></td>
-                    <td><?= $row["order_id"] ?></td>
-                    <td><?= $row['book_id'] ?></td>
-                    <td><?= $row["order_price"] ?></td>
-                    <td><?= $row["amount_qty"] ?></td>
-                    <td><?= $row["total"] ?></td>
-                    <td>
+                <tr class="">
+                    <td class="text-center"><?= $row['order_id'];?></td>
+                    <td><?= $row["cus_name"];?></td>
+                    <td><?= $row["address"];?></td>
+                    <td class="text-center"><?= $row["phone"];?></td>
+                    <td class="text-center"><?= $row["total_price"];?></td>
+                    <td class="text-center"><?= $row["status"];?></td>
+                    <td class="text-center"><?= $row["date"];?></td>
+                    <td class="text-center">
                         <!-- <a 
                         class="text-light text-decoration-none btn btn-primary"
-                        href="#<?= $row['book_id'] ?>">
+                        href="#<?= $row['order_id'] ?>">
                             <i class="bi bi-eye"></i></i> 
                         </a> -->
-                        <a class="text-light text-decoration-none btn btn-secondary" href="edit_book.php?id=<?= $row['book_id'] ?>">
+                        <a class="text-light text-decoration-none btn btn-secondary" href="edit_order.php?id=<?= $row['order_id'] ?>">
                             <i class="bi bi-pencil-fill"></i>
                         </a>
-                        <a class="text-white text-decoration-none btn btn-danger" href="del_book.php?id=<?= $row['book_id'] ?>" onclick="clikComfirm(this.href);return false;">
+                        <a class="text-white text-decoration-none btn btn-danger" href="del_order.php?id=<?= $row['order_id'] ?>" onclick="clikComfirm(this.href);return false;">
                             <i class="bi bi-trash-fill"></i>
                         </a>
                     </td>

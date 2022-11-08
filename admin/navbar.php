@@ -6,10 +6,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- start menu 1 -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="book_table.php">จัดการข้อมูลหนังสือ</a>
-        </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               จัดการข้อมูลหนังสือ
@@ -19,13 +17,24 @@
               <li><a class="dropdown-item" href="form_book.php">เพิ่มข้อมูลหนังสือ</a></li>
             </ul>
           </li>
+          <!-- end menu 1 -->
+
+          <!-- start menu 2 -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               จัดการข้อมูลลูกค้า
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="customer_table.php">ข้อมูลลูกค้า</a></li>
-              <!-- <li><a class="dropdown-item" href="form_cus.php">เพิ่มข้อมูลลูกค้า</a></li> -->
+            </ul>
+          </li>
+          <!-- end menu 2 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              จัดการข้อมูลออเดอร์
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="orders_table.php">ข้อมูลมูลออเดอร์</a></li>
             </ul>
           </li>
         </ul>
