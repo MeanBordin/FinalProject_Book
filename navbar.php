@@ -26,7 +26,9 @@
                 </ul>
                 <form class="d-flex mt-2 mb-1" method="POST">
                     <input class="form-control me-2" type="search" placeholder="Search"  name="search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <button class="btn btn-outline-light" type="submit">
+                            <i class="bi bi-search text-light"></i>
+                    </button>
                     <h3 class="ms-3">
                         <a href="cart.php">
                             <i class="bi bi-bag-heart text-light"></i>

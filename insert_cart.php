@@ -1,18 +1,19 @@
 <?php
     session_start();
     include 'localhost/connect.php';
-
+    
     $cus_name = $_POST['cus_name'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
-
+    
     $sql = "INSERT INTO orders(cus_name, address, phone, total_price, status)
                         VALUES('$cus_name', '$address', '$phone', '" . $_SESSION["sum_price"] ."', '1')";
     
     mysqli_query($conn, $sql);
     $order_id = mysqli_insert_id($conn);
+    $_SESSION['order_id'] = $order_id;
 
-    for ($i=0; (int)$_SESSION['intLine']; $i++) {
+    for ($i=0; $i <= (int)$_SESSION['intLine']; $i++) {
         if ($_SESSION["strProductID"][$i] != "") {
             $new_sql = "SELECT * FROM book WHERE book_id = '" . $_SESSION["strProductID"][$i] ."' ";
         
@@ -22,7 +23,7 @@
             $price = $new_row['price'];
             $total = $_SESSION["strQty"][$i] * $price;
 
-            $sql_sum = "INSERT INTO order_detail(order_id, book_id, order_price, amount, total)
+            $sql_sum = "INSERT INTO order_detail(order_id, book_id, order_price, amount_qty, total)
                         VALUES('$order_id', '". $_SESSION["strProductID"][$i] ."', '$price', '".$_SESSION["strQty"][$i]."', '$total')";
             
             $result = mysqli_query($conn, $sql_sum);
@@ -31,11 +32,8 @@
                                WHERE book_id = '". $_SESSION["strProductID"][$i] ."' ";
                 mysqli_query($conn, $sql_update);
 
-                echo "<script>alert('บันทึกข้อมูลสำเร็จ');</script>";
-                echo "<script>window.location='index.php';</script>";
-            } else {
-                echo "<script>alert('ไม่สามารถบันทึกข้อมูลได้');</script>";
-                echo "Error : {$sql} <br>" . mysqli_error($conn);
+                // echo "<script>alert('บันทึกข้อมูลสำเร็จ');</script>";
+                echo "<script>window.location='report.php';</script>";
             } 
         }
     }
@@ -44,5 +42,6 @@
     unset($_SESSION["strProductID"][$i]);
     unset($_SESSION["strQty"][$i]);
     unset($_SESSION["sum_price"]);
-    session_destroy();
+    // session_destroy();
+ 
 ?>
