@@ -18,7 +18,7 @@
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <!-- <?php //include '../navbar.php'?> -->
+    <?php include 'navbar.php'?>
     <div class="container">
         <div class="h4 text-center alert alert-warning mb-4 mt-4" role="alert">
             แก้ไขข้อมูลสินค้า 
